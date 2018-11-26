@@ -36,9 +36,24 @@ end
 
 function PlayState:update(dt)
 
+    -- TODO: refactor to new paused state class
     if love.keyboard.wasPressed('p') then
-        gStateMachine:change('pause')
+        -- gStateMachine:change('pause')
+        if gPaused then
+            gPaused = false
+            sounds['music']:play()
+        else
+            gPaused = true
+            sounds['pause']:play()
+            sounds['music']:pause()
+        end
     end
+
+    -- if the game is paused apply neither movement nor pipe spawning
+    if gPaused then
+        dt = 0
+    end
+
     -- update timer for pipe spawning
     self.timer = self.timer + dt
 
@@ -102,8 +117,10 @@ function PlayState:update(dt)
         end
     end
 
-    -- update bird based on gravity and input
-    self.bird:update(dt)
+    -- update bird based on gravity and input when not paused
+    if not gPaused then
+        self.bird:update(dt)
+    end
 
     -- reset if we get to the ground
     if self.bird.y > VIRTUAL_HEIGHT - 15 then

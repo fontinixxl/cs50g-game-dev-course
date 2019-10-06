@@ -25,3 +25,5 @@ The lectures I have completed so far are the following:
      - Only allow swapping when it results in a match. If there are no matches available to perform, reset the board.
      - (Optional) Implement matching using the mouse. (Hint: you’ll need push:toGame(x,y); see the push library’s documentation here for 
        details!
+1. Super 50 Bro
+

@@ -1,29 +1,30 @@
-# CS50's Introduction to Game Development
-Repo where you can find all the assignment solutions of the CS50g course I have already completed.
+# CS50's Introduction to Game Development (HarvardX)
+This repository contains all the assignment solutions of the course [CS50's Introducction to Game Development](https://cs50.harvard.edu/games/2018/) by **HarvardX**
 
-For every lecture (game) we were given a distribution base code where we have to add a certain amount of new features in order to complete each of the assignment.
+The repository is organized by assignments (games), where each folder contains a number (cooresponding to the leason) and the name of the game the leason is based on.
 
-The lectures I have completed so far are the following:
-1. Pong
-    - Read and understand all of the Pong source code from Lecture 0.
-    - Implement a basic AI for either Player 1 or 2 (or both!).
-1. Flappy Bird
-    - Read and understand all of the Flappy (Fifty!) Bird source code from Lecture 1.
-    - Influence the generation of pipes so as to bring about more complicated level generation.
-    - Give the player a medal for their performance, along with their score.
-    - Implement a pause feature, just in case life gets in the way of jumping through pipes!
-1. Breakout
-     - Read and understand all of the Breakout source code from Lecture 1.
-     - Add a powerup to the game that spawns two extra Balls.
-     - Grow and shrink the Paddle when the player gains enough points or loses a life.
-     - Add a locked Brick that will only open when the player collects a second new powerup, a key, which should only spawn when such a Brick exists and randomly as per the Ball powerup.
-1. Match-3 
-     - Implement time addition on matches, such that scoring a match extends the timer by 1 second per tile in a match.
-     - Ensure Level 1 starts just with simple flat blocks (the first of each color in the sprite sheet), with later levels generating the       
-       blocks with patterns on them (like the triangle, cross, etc.). These should be worth more points, at your discretion.
-     - Creat random shiny versions of blocks that will destroy an entire row on match, granting points for each block in the row.
-     - Only allow swapping when it results in a match. If there are no matches available to perform, reset the board.
-     - (Optional) Implement matching using the mouse. (Hint: you’ll need push:toGame(x,y); see the push library’s documentation here for 
-       details!
-1. Super 50 Bro
+Each folder contains the game source files, with the assignment's features implemented in separeted commits.
+Assignments 0-7 uses LOVE2D whereas 8-10 uses Unity3D.
 
+## Major topics covered
+
+- LÖVE2D and Lua
+- Unity and C#
+- Game States: Finite State Machine, StateStacks
+- Generes: 2D-side-scrolling, top-down perspective, Turn-Based Systems (RPG Mechanics), FPS
+- Physics: AABB Collision Detection, Hitboxes/Hurtboxes, Box2D framework (LÖVE2D)
+- Raycasting (Unity)
+- Camera handling
+- Imput handling (Keyboard, Mouse)
+- Sprite Integration: Sprite Sheets, Tile Maps
+- PCG: Procedural Level Generation, Dungeon Gen, 3D Maze Gen.
+- UI
+- Materials and Lighting (Unity)
+- Texturing: RenderTexture, Texture Masking, Decals (Unity)
+- ProBuilder and ProGrids (Unity)
+- Tweening (LÖVE2D)
+- Data-Driven Design (LÖVE2D)
+- Events
+- 2D Animation
+- Basic AI
+- PowerUps
